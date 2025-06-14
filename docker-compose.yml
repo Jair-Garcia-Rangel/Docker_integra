@@ -1,0 +1,14 @@
+services:
+  backend:
+    build: ./estacionamiento-backend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: always
+
+  frontend:
+    build: ./estacionamiento-frontend
+    ports:
+      - "8080:80"
+    restart: always
